@@ -1,7 +1,12 @@
 {
 	"name": "treemenu-reactjs",
-	"version": "0.1.0",
-	"private": true,
+	"version": "1.0.5",
+	"private": false,
+	"description": "treemenu-reactjs is an off-canvas treemenu component written in ReactJS with TypeScript and Styled Components.",
+	"repository": "https://subzane@github.com/SubZane/treemenu-reactjs.git",
+	"homepage": "https://subzane.github.io/treemenu-reactjs",
+	"bugs": "https://github.com/SubZane/treemenu-reactjs/issues",
+	"author": "Andreas Lee-Norman <andreas@lee-norman.com>",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^13.0.0",
