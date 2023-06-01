@@ -26,7 +26,7 @@ export interface IThemeInterface {
 }
 
 export const theme = {
-	backgroundColor: "#27445C",
+	backgroundColor: "#40434b",
 	textColor: "#fff",
 	linkColor: "#fff",
 	borderRadius: "7px",

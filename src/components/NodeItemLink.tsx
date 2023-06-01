@@ -11,8 +11,10 @@ const NodeItemLink = styled.a<NodeItemLinkTypes>`
 	padding-top: 11px;
 	padding-bottom: 13px;
 	display: block;
+	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+	text-decoration: none;
 	float: none;
 	overflow: hidden;
 	width: 100%;
