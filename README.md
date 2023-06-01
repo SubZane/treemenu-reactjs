@@ -16,7 +16,7 @@
 
 ## Description
 
-treemenu-reactjs is an off-canvas menu component written in ReactJS with TypeScript and Styled Components.
+treemenu-reactjs is an off-canvas tree menu component written in ReactJS with TypeScript and Styled Components.
 
 ## Demo
 
