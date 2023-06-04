@@ -2,16 +2,17 @@
   <img src="https://raw.githubusercontent.com/SubZane/treemenu-reactjs/master/public/img/github-img.png" width="400" alt="treemenu-reactjs">
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/styled-components?color=%23DB7093">
-	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react?color=61DAFB">
-	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react-dom?color=61DAFB">
-	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react-scripts?color=61DAFB">
-	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/typescript">
+	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/styled-components?color=%23DB7093?style=flat-square">
+	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react?color=61DAFB?style=flat-square">
+	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react-dom?color=61DAFB?style=flat-square">
+	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/react-scripts?color=61DAFB?style=flat-square">
+	<img src="https://img.shields.io/github/package-json/dependency-version/subzane/treemenu-reactjs/typescript?style=flat-square">
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/v/release/SubZane/treemenu-reactjs?sort=semver">
-	<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/subzane/treemenu-reactjs/Build">
+	<img src="https://img.shields.io/github/v/release/SubZane/treemenu-reactjs?sort=semver?style=flat-square">
+	<img src="https://img.shields.io/github/actions/workflow/status/subzane/treemenu-reactjs/build.yml?style=flat-square">
 	<img src="https://img.shields.io/static/v1?label=license&message=MIT&color=brightgreen">
+	<img src="https://img.shields.io/librariesio/github/subzane/treemenu-reactjs?style=flat-square">
 </p>
 
 ## Description
