@@ -1,21 +1,24 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react'
+import { createRoot } from 'react-dom/client'
 
-import TreeMenu from "./App";
-import { ThemeProvider, treemenuTheme } from "./helpers/theme";
-import menudataJSON from "./menudata.json";
-import OffCanvasPanel from "./offcanvaspanel/PanelComponent/App";
-import { theme as offcanvaspanelTheme } from "./offcanvaspanel/PanelComponent/theme";
-import { animationTypes } from "./offcanvaspanel/PanelComponent/types";
+import TreeMenu from './App'
+import { ThemeProvider, treemenuTheme } from './helpers/theme'
+import menudataJSON from './menudata.json'
+import OffCanvasPanel from './offcanvaspanel/PanelComponent/App'
+import { theme as offcanvaspanelTheme } from './offcanvaspanel/PanelComponent/theme'
+import { animationTypes } from './offcanvaspanel/PanelComponent/types'
+
+const container = document.getElementById('root')
+const root = createRoot(container!)
 
 function TreeMenuContainer() {
-	const [effect, setEffect] = useState<animationTypes>("door-left");
-	const theme = { ...treemenuTheme, ...offcanvaspanelTheme };
+	const [effect, setEffect] = useState<animationTypes>('door-left')
+	const theme = { ...treemenuTheme, ...offcanvaspanelTheme }
 
 	return (
 		<React.Fragment>
 			<ThemeProvider theme={theme}>
-				<OffCanvasPanel state={""} showButton={true} animation={effect}>
+				<OffCanvasPanel state={''} showButton={true} animation={effect}>
 					<TreeMenu menuDataSource={menudataJSON.treemenu} />
 				</OffCanvasPanel>
 				<div className="select">
@@ -28,6 +31,7 @@ function TreeMenuContainer() {
 				</div>
 			</ThemeProvider>
 		</React.Fragment>
-	);
+	)
 }
-ReactDOM.render(<TreeMenuContainer />, document.getElementById("root"));
+
+root.render(<TreeMenuContainer />)

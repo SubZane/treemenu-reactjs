@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { BsChevronDown, BsChevronRight } from "react-icons/bs";
+import React, { useState } from 'react'
+import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
-import { css, styled } from "../helpers/theme";
-import Node from "./Node";
-import NodeItemLink from "./NodeItemLink";
+import { css, styled } from '../helpers/theme'
+import Node from './Node'
+import NodeItemLink from './NodeItemLink'
 
-type NodeTypes = {};
+type NodeTypes = {}
 type NodeItemTypes = {
-	hasChildren: boolean;
-	level: number;
-};
+	hasChildren: boolean
+	level: number
+}
 
 const NodeItem = styled.li<NodeItemTypes>`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-`;
+`
 
 const NodeItemContent = styled.div<NodeTypes>`
 	display: block;
@@ -23,7 +23,7 @@ const NodeItemContent = styled.div<NodeTypes>`
 	font-weight: 400;
 	font-size: 12px;
 	display: flex;
-`;
+`
 
 const NodeExpand = styled.a<NodeItemTypes>`
 	color: ${(props) => props.theme.treemenu.linkColor};
@@ -77,27 +77,27 @@ const NodeExpand = styled.a<NodeItemTypes>`
 	&:focus {
 		text-decoration: none;
 	}
-`;
+`
 
 const NodeItemToggleIcon = styled.span<NodeTypes>`
 	margin-left: 5px;
-`;
+`
 
 interface IProps {
-	hasChildren: boolean;
-	menuData: Array<any>;
-	title: string;
-	url: string;
-	id: number;
-	level: number;
-	open: boolean;
+	hasChildren: boolean
+	menuData: Array<any>
+	title: string
+	url: string
+	id: number
+	level: number
+	open: boolean
 }
 
 function NodeElement(props: IProps) {
-	const [isNodeExpanded, setNodeExpanded] = useState<boolean>(false);
+	const [isNodeExpanded, setNodeExpanded] = useState<boolean>(false)
 
 	function ToggleNode() {
-		setNodeExpanded(!isNodeExpanded);
+		setNodeExpanded(!isNodeExpanded)
 	}
 
 	return (
@@ -129,7 +129,7 @@ function NodeElement(props: IProps) {
 			</NodeItemContent>
 			{props.hasChildren && <Node open={isNodeExpanded} level={props.level + 1} menuData={props.menuData}></Node>}
 		</NodeItem>
-	);
+	)
 }
 
-export default NodeElement;
+export default NodeElement
