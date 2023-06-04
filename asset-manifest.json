@@ -1,14 +1,10 @@
 {
   "files": {
-    "main.css": "/treemenu-reactjs/static/css/main.abd64e84.css",
-    "main.js": "/treemenu-reactjs/static/js/main.7918dd86.js",
+    "main.js": "/treemenu-reactjs/static/js/main.91af1777.js",
     "index.html": "/treemenu-reactjs/index.html",
-    "static/media/menubars.svg": "/treemenu-reactjs/static/media/menubars.7b954165fc2dfe8256784fef37664b17.svg",
-    "main.abd64e84.css.map": "/treemenu-reactjs/static/css/main.abd64e84.css.map",
-    "main.7918dd86.js.map": "/treemenu-reactjs/static/js/main.7918dd86.js.map"
+    "main.91af1777.js.map": "/treemenu-reactjs/static/js/main.91af1777.js.map"
   },
   "entrypoints": [
-    "static/css/main.abd64e84.css",
-    "static/js/main.7918dd86.js"
+    "static/js/main.91af1777.js"
   ]
 }
