@@ -12,7 +12,6 @@
 	<img src="https://img.shields.io/github/v/release/SubZane/treemenu-reactjs?sort=semver&style=flat-square">
 	<img src="https://img.shields.io/github/actions/workflow/status/subzane/treemenu-reactjs/build.yml?style=flat-square">
 	<img src="https://img.shields.io/static/v1?label=license&message=MIT&color=brightgreen">
-	<img src="https://img.shields.io/librariesio/github/subzane/treemenu-reactjs?style=flat-square">
 </p>
 
 ## Description
