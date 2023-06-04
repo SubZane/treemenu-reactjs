@@ -24,11 +24,15 @@
 		"typescript": "^4.4.2",
 		"web-vitals": "^2.1.0"
 	},
+	"devDependencies": {
+		"github-files-fetcher": "^1.6.0"
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"postinstall": "fetcher --url=https://subzane@github.com/SubZane/offcanvaspanels-reactjs/blob/master/src/PanelComponent/ --out=src/offcanvaspanel"
 	},
 	"eslintConfig": {
 		"extends": [

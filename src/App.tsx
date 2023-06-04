@@ -1,5 +1,3 @@
-import "./App.css";
-
 import React, { useEffect, useState } from "react";
 
 import Node from "./components/Node";
@@ -14,7 +12,7 @@ type treemenuObjectType = {
 
 const Navigation = styled.nav`
 	border-top: 1px solid rgba(255, 255, 255, 0.15);
-	background-color: ${(props) => props.theme.backgroundColor};
+	background-color: ${(props) => props.theme.treemenu.backgroundColor};
 `;
 
 interface TreeMenuProps {

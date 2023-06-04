@@ -9,36 +9,34 @@ const {
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<IThemeInterface>;
 
 export interface IThemeInterface {
-	backgroundColor: string;
-	textColor: string;
-	linkColor: string;
-	borderRadius: string;
-	transitionDuration: string;
-	innerPadding: string;
-	button: {
+	treemenu: {
 		backgroundColor: string;
-		color: string;
-		position: string;
-	};
-	slidemenu: {
 		textColor: string;
+		linkColor: string;
+		borderRadius: string;
+		transitionDuration: string;
+		innerPadding: string;
+		borderBottom: string;
+		hover: {
+			backgroundColor: string;
+			textColor: string;
+		};
 	};
 }
 
-export const theme = {
-	backgroundColor: "#40434b",
-	textColor: "#fff",
-	linkColor: "#fff",
-	borderRadius: "7px",
-	transitionDuration: "0.5s",
-	innerPadding: "0px",
-	button: {
-		backgroundColor: "#8DBFD1",
-		color: "#fff",
-		position: "right",
-	},
-	slidemenu: {
+export const treemenuTheme = {
+	treemenu: {
+		backgroundColor: "#E3DFDA",
 		textColor: "#3D3B39",
+		linkColor: "#3D3B39",
+		borderRadius: "7px",
+		transitionDuration: "0.5s",
+		innerPadding: "0px",
+		borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
+		hover: {
+			backgroundColor: "rgba(0, 0, 0, 0.1) !important",
+			textColor: "#3D3B39",
+		},
 	},
 };
 

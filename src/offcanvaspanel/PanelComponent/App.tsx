@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { css, createGlobalStyle } from '../helpers/theme'
-import { animationTypes, stateTypes, overlayFadeTypes, childrenTypes } from '../helpers/types'
+import React, { useEffect, useState } from 'react'
+
 import Overlay from './Overlay'
-import PanelButton from './PanelButton'
 import Panel from './Panel'
+import PanelButton from './PanelButton'
+import { createGlobalStyle, css } from './theme'
+import { animationTypes, fadeTypes, stateTypes } from './types'
 
 const GlobalStyle = createGlobalStyle<{ visible: boolean }>`
 body {
@@ -31,7 +32,7 @@ html {
 
 interface iProps {
 	animation: animationTypes
-	children?: childrenTypes
+	children?: JSX.Element[] | JSX.Element
 	showButton: boolean
 	state: stateTypes
 }
@@ -41,7 +42,7 @@ function OffCanvasPanel(props: iProps) {
 	const [isPanelVisible, setPanelVisible] = useState<boolean>(false)
 	const [hasOverlayAnimationEnded, sethasOverlayAnimationEnded] = useState<boolean>(false)
 	const [hasPanelTransitionEnded, sethasPanelTransitionEnded] = useState<boolean>(false)
-	const [fade, setFade] = useState<overlayFadeTypes>('')
+	const [fade, setFade] = useState<fadeTypes>('')
 
 	useEffect(() => {
 		if (props.state === 'open') {

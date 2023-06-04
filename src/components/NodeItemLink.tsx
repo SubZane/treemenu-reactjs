@@ -7,7 +7,7 @@ type NodeItemLinkTypes = {
 };
 
 const NodeItemLink = styled.a<NodeItemLinkTypes>`
-	color: ${(props) => props.theme.linkColor};
+	color: ${(props) => props.theme.treemenu.linkColor};
 	padding-top: 11px;
 	padding-bottom: 13px;
 	display: block;
@@ -23,42 +23,42 @@ const NodeItemLink = styled.a<NodeItemLinkTypes>`
 	${(props) =>
 		props.level === 2 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.1) !important;
+			background-color: rgba(0, 0, 0, 0.05) !important;
 			border-right: none;
 			padding-left: 25px;
 		`}
 	${(props) =>
 		props.level === 3 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.2) !important;
+			background-color: rgba(0, 0, 0, 0.1) !important;
 			border-right: none;
 			padding-left: 40px;
 		`}
 	${(props) =>
 		props.level === 4 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.3) !important;
+			background-color: rgba(0, 0, 0, 0.15) !important;
 			border-right: none;
 			padding-left: 55px;
 		`}
 	${(props) =>
 		props.level === 5 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.4) !important;
+			background-color: rgba(0, 0, 0, 0.2) !important;
 			border-right: none;
 			padding-left: 60px;
 		`}
 	${(props) =>
 		props.level === 6 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.5) !important;
+			background-color: rgba(0, 0, 0, 0.25) !important;
 			border-right: none;
 			padding-left: 75px;
 		`}
 	&:hover {
 		text-decoration: none;
-		background-color: rgba(255, 255, 255, 0.8) !important;
-		color: ${(props) => props.theme.backgroundColor};
+		background-color: ${(props) => props.theme.treemenu.hover.backgroundColor};
+		color: ${(props) => props.theme.treemenu.hover.textColor};
 	}
 	&::focus {
 		text-decoration: none;

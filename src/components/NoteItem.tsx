@@ -19,14 +19,14 @@ const NodeItem = styled.li<NodeItemTypes>`
 
 const NodeItemContent = styled.div<NodeTypes>`
 	display: block;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: ${(props) => props.theme.treemenu.borderBottom};
 	font-weight: 400;
 	font-size: 12px;
 	display: flex;
 `;
 
 const NodeExpand = styled.a<NodeItemTypes>`
-	color: #fff;
+	color: ${(props) => props.theme.treemenu.linkColor};
 	width: 60px;
 	font-size: 11px;
 	float: right;
@@ -37,42 +37,42 @@ const NodeExpand = styled.a<NodeItemTypes>`
 	order: 2;
 	cursor: pointer;
 	&:not([href]) {
-		color: #fff;
+		color: ${(props) => props.theme.treemenu.linkColor};
 	}
 	${(props) =>
 		props.level === 2 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.1) !important;
+			background-color: rgba(0, 0, 0, 0.05) !important;
 			border-right: none;
 		`}
 	${(props) =>
 		props.level === 3 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.2) !important;
+			background-color: rgba(0, 0, 0, 0.1) !important;
 			border-right: none;
 		`}
 	${(props) =>
 		props.level === 4 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.3) !important;
+			background-color: rgba(0, 0, 0, 0.15) !important;
 			border-right: none;
 		`}
 	${(props) =>
 		props.level === 5 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.4) !important;
+			background-color: rgba(0, 0, 0, 0.2) !important;
 			border-right: none;
 		`}
 	${(props) =>
 		props.level === 6 &&
 		css`
-			background-color: rgba(0, 0, 0, 0.5) !important;
+			background-color: rgba(0, 0, 0, 0.25) !important;
 			border-right: none;
 		`}
 	&:hover, &:not([href]):hover {
 		text-decoration: none;
-		background-color: rgba(255, 255, 255, 0.8) !important;
-		color: ${(props) => props.theme.backgroundColor};
+		background-color: ${(props) => props.theme.treemenu.hover.backgroundColor};
+		color: ${(props) => props.theme.treemenu.hover.textColor};
 	}
 	&:focus {
 		text-decoration: none;

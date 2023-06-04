@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled, css, keyframes } from '../helpers/theme'
-import { overlayFadeTypes } from '../helpers/types'
+
+import { css, keyframes, styled } from './theme'
+import { fadeTypes } from './types'
 
 const fadein = keyframes`
 	0% { opacity: 0;}
@@ -13,7 +14,7 @@ const fadeout = keyframes`
 `
 
 type OverlayType = {
-	fade: overlayFadeTypes
+	fade: fadeTypes
 }
 
 const Overlay = styled.div<OverlayType>`
@@ -25,22 +26,22 @@ const Overlay = styled.div<OverlayType>`
 	bottom: -5000px;
 	left: -5000px;
 	display: none;
-	background: rgba(43,46,56,.9);
-  ${(props) =>
+	background: rgba(43, 46, 56, 0.9);
+	${(props) =>
 		props.fade === 'in' &&
 		css`
 			animation: ${fadein};
-			animation-duration: ${props.theme.transitionDuration};
+			animation-duration: ${props.theme.offcanvasPanel.transitionDuration};
 			animation-fill-mode: forwards;
 			animation-timing-function: ease-in;
 			animation-iteration-count: 1;
 			display: block;
 		`}
-  ${(props) =>
+	${(props) =>
 		props.fade === 'out' &&
 		css`
 			animation: ${fadeout};
-			animation-duration: ${props.theme.transitionDuration};
+			animation-duration: ${props.theme.offcanvasPanel.transitionDuration};
 			animation-timing-function: ease-out;
 			animation-fill-mode: forwards;
 			animation-iteration-count: 1;
@@ -55,7 +56,7 @@ const Overlay = styled.div<OverlayType>`
 `
 
 interface iProps {
-	fade: overlayFadeTypes
+	fade: fadeTypes
 	handleEvent: () => void
 	onAnimationEnd: () => void
 }

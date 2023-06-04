@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import TreeMenu from "./App";
-import { theme, ThemeProvider } from "./helpers/theme";
-import { animationTypes } from "./helpers/types";
+import { ThemeProvider, treemenuTheme } from "./helpers/theme";
 import menudataJSON from "./menudata.json";
-import OffCanvasPanel from "./offcanvas-panel/App";
+import OffCanvasPanel from "./offcanvaspanel/PanelComponent/App";
+import { theme as offcanvaspanelTheme } from "./offcanvaspanel/PanelComponent/theme";
+import { animationTypes } from "./offcanvaspanel/PanelComponent/types";
 
 function TreeMenuContainer() {
 	const [effect, setEffect] = useState<animationTypes>("door-left");
+	const theme = { ...treemenuTheme, ...offcanvaspanelTheme };
 
 	return (
 		<React.Fragment>

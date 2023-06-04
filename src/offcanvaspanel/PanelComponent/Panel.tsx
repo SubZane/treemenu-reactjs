@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 
-import { css, styled } from "../helpers/theme";
-import { animationTypes, childrenTypes } from "../helpers/types";
-import Content from "./Content";
+import Content from './Content'
+import { css, styled } from './theme'
+import { animationTypes } from './types'
 
 type PanelType = {
-	visible: boolean;
-	animation: string;
-};
+	visible: boolean
+	animation: string
+}
 
 const Panel = styled.div<PanelType>`
 	position: fixed;
@@ -17,17 +17,7 @@ const Panel = styled.div<PanelType>`
 	visibility: hidden;
 	transform: rotateX(0deg);
 	${(props) =>
-		props.animation === "flip-top" &&
-		css`
-			top: 0px;
-			right: 10px;
-			left: 50px;
-			height: 400px;
-			perspective: 1300px;
-		`}
-
-	${(props) =>
-		props.animation === "door-left" &&
+		props.animation === 'door-left' &&
 		css`
 			top: 10px;
 			right: 50px;
@@ -37,7 +27,7 @@ const Panel = styled.div<PanelType>`
 		`}
 
 	${(props) =>
-		props.animation === "door-right" &&
+		props.animation === 'door-right' &&
 		css`
 			top: 10px;
 			right: 0px;
@@ -47,12 +37,22 @@ const Panel = styled.div<PanelType>`
 		`}
 
 	${(props) =>
-		props.animation === "flip-bottom" &&
+		props.animation === 'flip-bottom' &&
 		css`
 			top: 50px;
 			right: 20px;
 			left: 20px;
 			bottom: 0;
+			perspective: 1300px;
+		`}
+
+	${(props) =>
+		props.animation === 'flip-top' &&
+		css`
+			top: 0;
+			right: 20px;
+			left: 20px;
+			bottom: 50px;
 			perspective: 1300px;
 		`}
 
@@ -65,37 +65,38 @@ const Panel = styled.div<PanelType>`
 
 	@media (min-width: 768px) {
 		${(props) =>
-			props.animation === "door-left" &&
+			props.animation === 'door-left' &&
 			css`
 				right: auto;
 			`}
 		${(props) =>
-			props.animation === "door-right" &&
-			css`
-				left: auto;
-			`}
-		${(props) =>
-			props.animation === "flip-top" &&
+			props.animation === 'door-right' &&
 			css`
 				left: auto;
 			`}
     width: 30%;
-		max-width: 400px;
 		border-radius: 0 5px;
 		${(props) =>
-			props.animation === "flip-bottom" &&
+			props.animation === 'flip-top' &&
+			css`
+				width: 600px;
+				left: 50%;
+				margin-left: -300px; /* Half of the width */
+			`}
+		${(props) =>
+			props.animation === 'flip-bottom' &&
 			css`
 				width: 600px;
 				left: 50%;
 				margin-left: -300px; /* Half of the width */
 			`}
 	}
-`;
+`
 interface iProps {
-	visible: boolean;
-	animation: animationTypes;
-	onTransitionEnd: () => void;
-	children?: childrenTypes;
+	visible: boolean
+	animation: animationTypes
+	onTransitionEnd: () => void
+	children?: JSX.Element[] | JSX.Element
 }
 
 function PanelContainer(props: iProps) {
@@ -103,7 +104,7 @@ function PanelContainer(props: iProps) {
 		<Panel animation={props.animation} visible={props.visible} onTransitionEnd={props.onTransitionEnd}>
 			<Content visible={props.visible} animation={props.animation} children={props.children} />
 		</Panel>
-	);
+	)
 }
 
-export default PanelContainer;
+export default PanelContainer
